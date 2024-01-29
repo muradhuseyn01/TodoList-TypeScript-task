@@ -1,0 +1,132 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+.container {
+   width: 40%;
+   height: auto;
+   margin: 50px auto;
+   padding: 15px;
+   background-color: rgb(162, 161, 161);
+   border-radius: 20px;
+}
+
+.container .con_head {
+   text-align: center;
+   padding: 15px 0;
+   color: rgb(90, 90, 90);
+}
+
+#todo-form {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 7px;
+}
+
+#txtinput.error {
+   border: 2px solid red;
+}
+
+#txtinput {
+   width: 80%;
+   height: 32px;
+   border-radius: 7px;
+   border: none;
+   outline: none;
+   margin-left: 20px;
+}
+
+ul>li>span {
+   width: 100%;
+   display: block;
+   overflow: hidden;
+}
+
+ul>li:hover {
+   box-shadow: 0.5px 0.5px 5px 2px purple;
+}
+
+#btn-todo {
+   padding: 6px 15px;
+   font-size: 1.1rem;
+   border-radius: 6px;
+   border: none;
+   outline: none;
+   background-color: rgb(93, 26, 156);
+   color: white;
+   margin-left: 6px;
+   font-weight: 700;
+   cursor: pointer;
+}
+
+#btn-todo:hover {
+   background-color: rgb(139, 64, 209);
+}
+
+.todo_list {
+   height: auto;
+   margin-top: 20px;
+   overflow-y: auto;
+}
+
+.todo_list>li {
+   list-style-type: none;
+   margin: 15px;
+   flex-grow: 1;
+   padding: 10px 32px;
+   font-size: 1.1rem;
+   border-radius: 4px;
+   cursor: pointer;
+   background-color: rgb(85, 49, 96);
+   color: white;
+   position: relative;
+}
+
+ul>li::before {
+   width: 18px;
+   content: '';
+   height: 18px;
+   position: absolute;
+   background-image: url(./icons/circle-check-regular.svg);
+   top: 12px;
+   left: 6px;
+}
+
+ul>li.checked {
+   text-decoration: line-through;
+   color: #909090;
+}
+
+ul>li.checked::before {
+   background-image: url(./icons/circle-check-solid.svg); 
+}
+
+ul>li>img {
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: rgb(150, 61, 177);
+   position: absolute;
+   right: 6px;
+   top: 8px;
+}
+
+@media screen and (max-width:375px) {
+   .container {
+      width: 95%;
+   }
+
+   #txtinput {
+      width: 90%;
+      margin: 0 auto;
+   }
+
+   #btn-todo {
+      width: 50%;
+      margin: 16px auto;
+   }
+
+}
